@@ -1,0 +1,17 @@
+<!-- myapp/templates/upload.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File</title>
+</head>
+<body>
+    <h2>Upload File</h2>
+    <form method="post" enctype="multipart/form-data">
+        <p>Upload Your Python File</p>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
